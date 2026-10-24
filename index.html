@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="uz">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shahriyor Qayumov — Shaxsiy sahifa</title>
+  <meta name="description" content="Shahriyor Qayumov — iqtisodiyot talabasi, SAT Math mentori va AI kontent yaratuvchisi.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0a0a'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-weight='700' font-size='30' fill='%23d4af37'%3ESQ%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Yuklanish ekrani -->
+  <div class="loader" id="loader">
+    <div class="loader__logo">SQ</div>
+    <div class="loader__bar"><span></span></div>
+  </div>
+
+  <div class="cursor-glow" id="cursorGlow"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- 1. NAVBAR -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Bosh sahifa">SQ</a>
+      <nav class="nav__links" id="navLinks">
+        <a href="#about">Haqimda</a>
+        <a href="#skills">Ko'nikmalar</a>
+        <a href="#projects">Loyihalar</a>
+        <a href="#experience">Yo'lim</a>
+        <a href="#contact">Aloqa</a>
+        <a href="#contact" class="btn btn--gold btn--sm nav__cta-mobile">Bog'lanish</a>
+      </nav>
+      <a href="#contact" class="btn btn--gold btn--sm nav__cta magnetic">Bog'lanish</a>
+      <button class="nav__burger" id="burger" aria-label="Menyu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- 2. HERO -->
+    <section class="hero">
+      <canvas id="hero3d" class="hero__canvas" aria-hidden="true"></canvas>
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="badge reveal"><i class="dot"></i> Hamkorlikka ochiqman</span>
+          <h1 class="hero__title reveal">
+            Salom, men <span class="gold-text">Shahriyor</span> —<br>
+            intizomni <em>natijaga</em> aylantiraman
+          </h1>
+          <p class="hero__sub reveal">
+            Guliston davlat universitetida grant asosida iqtisodiyot yo'nalishida o'qiyman.
+            SAT Math'dan dars beraman, AI va o'z ustida ishlash haqida kontent yarataman.
+          </p>
+          <div class="hero__actions reveal">
+            <a href="#projects" class="btn btn--gold magnetic">Loyihalarim</a>
+            <a href="https://t.me/studio_542" target="_blank" rel="noopener" class="btn btn--outline magnetic">Telegram'ga qo'shilish</a>
+          </div>
+          <div class="socials reveal">
+            <a href="https://github.com/Shahriyor-ai1" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+            <a href="https://t.me/studio_542" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg viewBox="0 0 24 24"><path d="M21.9 4.3 18.7 19.4c-.24 1.07-.87 1.33-1.77.83l-4.88-3.6-2.36 2.27c-.26.26-.48.48-.98.48l.35-4.97 9.05-8.18c.39-.35-.09-.54-.61-.2L6.32 13.1l-4.82-1.5c-1.05-.33-1.07-1.05.22-1.55L20.56 2.8c.87-.32 1.64.2 1.34 1.5Z"/></svg>
+            </a>
+            <a href="https://instagram.com/shakhriyorkayumov" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 1 0 0 10 5 5 0 0 0 0-10Zm0 8.2a3.2 3.2 0 1 1 0-6.4 3.2 3.2 0 0 1 0 6.4ZM17.3 5.5a1.2 1.2 0 1 0 0 2.4 1.2 1.2 0 0 0 0-2.4ZM12 2c-2.7 0-3.05 0-4.1.06C4.6 2.2 2.2 4.6 2.06 7.9 2 8.95 2 9.3 2 12s0 3.05.06 4.1c.15 3.3 2.55 5.7 5.84 5.84C8.95 22 9.3 22 12 22s3.05 0 4.1-.06c3.29-.15 5.7-2.55 5.84-5.84.06-1.05.06-1.4.06-4.1s0-3.05-.06-4.1C21.8 4.6 19.4 2.2 16.1 2.06 15.05 2 14.7 2 12 2Zm0 1.8c2.67 0 2.98 0 4.03.06 2.35.1 3.99 1.76 4.1 4.1.05 1.05.06 1.36.06 4.04s0 2.98-.06 4.03c-.11 2.34-1.75 4-4.1 4.1-1.05.05-1.36.06-4.03.06s-2.98 0-4.03-.06c-2.36-.1-3.99-1.77-4.1-4.1C3.81 14.98 3.8 14.67 3.8 12s0-2.99.06-4.04c.1-2.33 1.75-3.99 4.1-4.1C9.02 3.81 9.33 3.8 12 3.8Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="portrait tilt" data-tilt="8">
+            <div class="portrait__ring"></div>
+            <div class="portrait__frame">
+              <!-- O'z rasmingizni images/photo.jpg nomi bilan joylang -->
+              <img src="images/photo.jpg" alt="Shahriyor Qayumov" onerror="this.remove()">
+              <span class="portrait__fallback">SQ</span>
+            </div>
+            <div class="float-card float-card--1">
+              <strong><span class="counter" data-to="5000">0</span>+</strong>
+              <span>Telegram obunachi</span>
+            </div>
+            <div class="float-card float-card--2">
+              <strong>SAT <span class="counter" data-to="1300">0</span></strong>
+              <span>Math 720</span>
+            </div>
+            <div class="float-card float-card--3">
+              <strong>CEFR B2</strong>
+              <span>Ingliz tili</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a href="#about" class="scroll-hint" aria-label="Pastga">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- Yuguruvchi lenta -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>SAT Math</span><span>✦</span><span>Sun'iy intellekt</span><span>✦</span><span>Iqtisodiyot</span><span>✦</span><span>Intizom</span><span>✦</span><span>Natija</span><span>✦</span><span>Shaxsiy brend</span><span>✦</span>
+        <span>SAT Math</span><span>✦</span><span>Sun'iy intellekt</span><span>✦</span><span>Iqtisodiyot</span><span>✦</span><span>Intizom</span><span>✦</span><span>Natija</span><span>✦</span><span>Shaxsiy brend</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- 3. HAQIMDA -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">01 — Haqimda</span>
+          <h2 class="section__title">Gapirmasdan, <span class="gold-text">natija</span> bilan javob beraman</h2>
+        </div>
+        <div class="about">
+          <div class="about__story reveal">
+            <p>
+              6-sinfda Prezident maktabiga topshirib, birinchi bosqichdan o'ta olmadim. O'shanda
+              <strong>maqtanish kerak emasligini</strong> o'rgandim. Bir yildan keyin hech kimga aytmasdan
+              tumandagi ixtisoslashtirilgan maktabga topshirdim va tuman bo'yicha <strong>2-o'rin</strong> bilan kirdim.
+            </p>
+            <p>
+              Keyin o'zimga va'da berdim va 2 yilda <strong>milliy sertifikatlar</strong> oldim: matematika,
+              ingliz tili, ona tili va tarix. Natijada universitetga <strong>grant asosida</strong> o'qishga kirdim.
+            </p>
+            <p>
+              Hozir maqsadim — SAT'da 1450+ ball, AI mutaxassisi bo'lish va shaxsiy brend yaratish.
+              Meni oldinga sabr, intizom va ishonch olib boradi.
+            </p>
+            <blockquote class="quote">“Natija so'zdan balandroq gapiradi.”</blockquote>
+          </div>
+          <div class="facts">
+            <div class="fact tilt reveal" data-tilt="10">
+              <span class="fact__icon">📍</span>
+              <span class="fact__label">Joylashuv</span>
+              <span class="fact__value">Sirdaryo, O'zbekiston</span>
+            </div>
+            <div class="fact tilt reveal" data-tilt="10">
+              <span class="fact__icon">🎓</span>
+              <span class="fact__label">Ta'lim</span>
+              <span class="fact__value">GulDU — Iqtisodiyot (grant)</span>
+            </div>
+            <div class="fact tilt reveal" data-tilt="10">
+              <span class="fact__icon">🗣️</span>
+              <span class="fact__label">Tillar</span>
+              <span class="fact__value">O'zbek, Ingliz (B2)</span>
+            </div>
+            <div class="fact tilt reveal" data-tilt="10">
+              <span class="fact__icon">🎯</span>
+              <span class="fact__label">Hozirgi fokus</span>
+              <span class="fact__value">SAT Math 800 va AI video</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. KO'NIKMALAR -->
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">02 — Ko'nikmalar</span>
+          <h2 class="section__title">Nimalarni <span class="gold-text">bilaman</span></h2>
+        </div>
+        <div class="skills">
+          <div class="skill-card tilt reveal" data-tilt="6">
+            <div class="skill-card__icon">∑</div>
+            <h3>Matematika va SAT</h3>
+            <p>Eng kuchli tomonim — misollar orqali tushuntirish.</p>
+            <div class="chips">
+              <span class="chip">📐 SAT Math</span>
+              <span class="chip">➗ Matematika</span>
+              <span class="chip">📊 Amaliy matematika</span>
+              <span class="chip">📈 Iqtisodiyot asoslari</span>
+            </div>
+          </div>
+          <div class="skill-card tilt reveal" data-tilt="6">
+            <div class="skill-card__icon">✦</div>
+            <h3>AI va kontent</h3>
+            <p>AI yordamida video va rasm yaratishni o'rganyapman.</p>
+            <div class="chips">
+              <span class="chip">🎬 AI video</span>
+              <span class="chip">🖼️ AI rasm</span>
+              <span class="chip">🤖 ChatGPT</span>
+              <span class="chip">💎 Gemini</span>
+              <span class="chip">🧠 Claude</span>
+              <span class="chip">📓 NotebookLM</span>
+            </div>
+          </div>
+          <div class="skill-card tilt reveal" data-tilt="6">
+            <div class="skill-card__icon">◈</div>
+            <h3>Tillar va vositalar</h3>
+            <p>Taqdimot va dizayn uchun ishlatadigan vositalarim.</p>
+            <div class="chips">
+              <span class="chip">🇬🇧 Ingliz tili B2</span>
+              <span class="chip">🇺🇿 O'zbek tili</span>
+              <span class="chip">🎨 Canva</span>
+              <span class="chip">📑 Gamma</span>
+              <span class="chip">♟️ Shaxmat</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. LOYIHALAR -->
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">03 — Loyihalar</span>
+          <h2 class="section__title">Ustida <span class="gold-text">ishlayotgan</span> loyihalarim</h2>
+        </div>
+        <div class="projects">
+          <article class="project tilt reveal" data-tilt="7">
+            <div class="project__cover project__cover--1"><span class="project__glyph">5K+</span></div>
+            <div class="project__body">
+              <span class="status status--active">Faol</span>
+              <h3>SAT Telegram kanali</h3>
+              <p>5 mingdan ortiq o'quvchi birga SAT'ga tayyorlanadigan kanal.</p>
+              <div class="tags"><span>SAT</span><span>Telegram</span><span>Ta'lim</span></div>
+              <a href="https://t.me/studio_542" target="_blank" rel="noopener" class="link">Batafsil →</a>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt="7">
+            <div class="project__cover project__cover--2"><span class="project__glyph">∫</span></div>
+            <div class="project__body">
+              <span class="status status--soon">Tez orada</span>
+              <h3>SAT Math kursi</h3>
+              <p>Misollar orqali bosqichma-bosqich o'rgatadigan SAT Math kursi.</p>
+              <div class="tags"><span>SAT Math</span><span>Kurs</span></div>
+              <a href="https://t.me/studio_542" target="_blank" rel="noopener" class="link">Kutish ro'yxati →</a>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt="7">
+            <div class="project__cover project__cover--3"><span class="project__glyph">AI</span></div>
+            <div class="project__body">
+              <span class="status status--soon">Ishga tushmoqda</span>
+              <h3>AI Instagram sahifasi</h3>
+              <p>AI bilan video va rasm yaratish bo'yicha maslahatlar va yangiliklar.</p>
+              <div class="tags"><span>AI</span><span>Instagram</span><span>Kontent</span></div>
+              <a href="https://instagram.com/shakhriyorkayumov" target="_blank" rel="noopener" class="link">Kuzatish →</a>
+            </div>
+          </article>
+          <article class="project tilt reveal" data-tilt="7">
+            <div class="project__cover project__cover--4"><span class="project__glyph">⌖</span></div>
+            <div class="project__body">
+              <span class="status status--idea">G'oya</span>
+              <h3>Aqlli manzillar xaritasi</h3>
+              <p>O'zbekistondagi barcha uylar xaritada: tez yordam, pochta, yetkazib berish va taksi uchun.</p>
+              <div class="tags"><span>Startap</span><span>Xarita</span><span>Logistika</span></div>
+              <a href="#contact" class="link">Hamkor bo'lish →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. YO'LIM (TAJRIBA) -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">04 — Yo'lim</span>
+          <h2 class="section__title">Har bir qadam — <span class="gold-text">dars</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline__line"><span id="timelineFill"></span></div>
+          <div class="tl-item reveal">
+            <span class="tl-item__date">6-sinf</span>
+            <h3>Birinchi muvaffaqiyatsizlik</h3>
+            <p>Prezident maktabining 1-bosqichidan o'ta olmadim va kamtarlikni o'rgandim.</p>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-item__date">7-sinf</span>
+            <h3>Tuman bo'yicha 2-o'rin</h3>
+            <p>Ixtisoslashtirilgan maktabga hech kimga aytmasdan topshirib kirdim.</p>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-item__date">10–11-sinf</span>
+            <h3>Milliy sertifikatlar</h3>
+            <p>Matematika (B), ingliz tili (CEFR B2), ona tili (C+), tarix (C).</p>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-item__date">Universitet</span>
+            <h3>GulDU — Iqtisodiyot, grant</h3>
+            <p>4 yillik grant va SAT orqali qo'shimcha grant bilan o'qishga kirdim.</p>
+          </div>
+          <div class="tl-item reveal">
+            <span class="tl-item__date">Hozir</span>
+            <h3>SAT mentor va AI kontent yaratuvchi</h3>
+            <p>5 ming obunachili SAT kanali, AI bo'yicha kontent. Keyingi maqsad — SAT 1450+.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. FIKRLAR (bo'sh shablon — haqiqiy fikrlarni shu yerga yozing) -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow">05 — Fikrlar</span>
+          <h2 class="section__title">Ular <span class="gold-text">nima deydi</span></h2>
+        </div>
+        <div class="testimonials">
+          <figure class="testimonial tilt reveal" data-tilt="6">
+            <span class="testimonial__mark">“</span>
+            <blockquote>Bu yerga o'quvchi yoki hamkorning haqiqiy fikri yoziladi.</blockquote>
+            <figcaption>
+              <span class="avatar">?</span>
+              <span><strong>Ism Familiya</strong><small>SAT o'quvchisi</small></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial tilt reveal" data-tilt="6">
+            <span class="testimonial__mark">“</span>
+            <blockquote>Bu yerga o'quvchi yoki hamkorning haqiqiy fikri yoziladi.</blockquote>
+            <figcaption>
+              <span class="avatar">?</span>
+              <span><strong>Ism Familiya</strong><small>Kanal obunachisi</small></span>
+            </figcaption>
+          </figure>
+          <figure class="testimonial tilt reveal" data-tilt="6">
+            <span class="testimonial__mark">“</span>
+            <blockquote>Bu yerga o'quvchi yoki hamkorning haqiqiy fikri yoziladi.</blockquote>
+            <figcaption>
+              <span class="avatar">?</span>
+              <span><strong>Ism Familiya</strong><small>Hamkor</small></span>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. ALOQA -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact tilt-none reveal">
+          <div class="contact__info">
+            <span class="eyebrow">06 — Aloqa</span>
+            <h2 class="section__title">Keling, birga <span class="gold-text">katta ish</span> qilamiz</h2>
+            <p>Hamkorlik, SAT darslari yoki AI loyihalari bo'yicha yozing. Odatda tez javob beraman.</p>
+            <a href="https://t.me/studio_542" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link__icon">✈</span>
+              <span><small>Telegram</small>@studio_542</span>
+            </a>
+            <a href="https://instagram.com/shakhriyorkayumov" target="_blank" rel="noopener" class="contact-link">
+              <span class="contact-link__icon">◎</span>
+              <span><small>Instagram</small>@shakhriyorkayumov</span>
+            </a>
+          </div>
+          <form class="form" id="contactForm">
+            <label>
+              <span>Ismingiz</span>
+              <input type="text" name="name" required placeholder="Ismingizni yozing">
+            </label>
+            <label>
+              <span>Mavzu</span>
+              <input type="text" name="topic" placeholder="Masalan: SAT darslari">
+            </label>
+            <label>
+              <span>Xabar</span>
+              <textarea name="message" rows="5" required placeholder="Xabaringizni yozing..."></textarea>
+            </label>
+            <button type="submit" class="btn btn--gold btn--block magnetic">Telegram orqali yuborish</button>
+            <p class="form__note" id="formNote">Xabaringiz nusxalanadi va Telegram ochiladi — uni chatga joylab yuboring.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 9. FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 Shahriyor Qayumov</span>
+      <div class="footer__links">
+        <a href="https://github.com/Shahriyor-ai1" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://t.me/studio_542" target="_blank" rel="noopener">Telegram</a>
+        <a href="https://instagram.com/shakhriyorkayumov" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <a href="#top" class="footer__top">Yuqoriga ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
