@@ -12,7 +12,7 @@ python -m http.server 5500
 
 ## Tahrirlash
 
-- **Rasm:** o'z rasmingizni `images/photo.jpg` nomi bilan joylang. Rasm bo'lmasa, "SQ" monogrammasi ko'rinadi.
+- **Rasm:** o'z rasmingizni `images/photo.jpg` nomi bilan joylang. Rasm bo'lmasa, "SHQ" monogrammasi ko'rinadi.
 - **Fikrlar:** `index.html` dagi `#testimonials` bo'limiga haqiqiy fikrlarni yozing.
 - **Ranglar:** `style.css` boshidagi `:root` tokenlarida.
 
